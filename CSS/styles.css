@@ -21,11 +21,12 @@
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer .footer-main .footer-wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 80%;
 }
 
 .footer .footer-main .footer-wrapper .content {
@@ -41,12 +42,19 @@
   color: #fff;
 }
 
-.footer .footer-main .footer-wrapper .content .box .tekst {
-  font-size: 15px;
+.footer .footer-main .footer-wrapper .content .box .icon-img {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 20px 20px 10px;
 }
 
-.footer .footer-main .footer-wrapper .content .box .tekst .row {
+.footer .footer-main .footer-wrapper .content .box .row {
   display: flex;
+}
+
+.footer .footer-main .footer-wrapper .content .box .tekst {
+  font-size: 15px;
 }
 
 .footer .footer-main .footer-wrapper .content .box .tekst .row i {
