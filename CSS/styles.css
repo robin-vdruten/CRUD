@@ -9,6 +9,7 @@
 
 :root {
   --maincolor: #70cdf4;
+  --second: #d354c5;
 }
 
 /* footer */
@@ -32,11 +33,10 @@
 .footer .footer-main .footer-wrapper .content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 0rem;
+  row-gap: 30px;
 }
 
 .footer .footer-main .footer-wrapper .content .box {
-  margin-bottom: 40px;
   font-size: 0.9375em;
   line-height: 1.618;
   color: #fff;
@@ -92,13 +92,13 @@
 }
 
 .footer .footer-main .footer-wrapper .content .box a {
-  color: #fcb83f;
+  color: #d354c5;
   font-weight: 700;
   text-decoration: none;
 }
 
 .footer .footer-bottom {
-  background-color: #fcb83f;
+  background-color: #d354c5;
   padding-top: 12px;
   padding-bottom: 6px;
 }
