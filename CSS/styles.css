@@ -32,7 +32,7 @@
 .footer .footer-main .footer-wrapper .content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 0.8rem;
+  gap: 0rem;
 }
 
 .footer .footer-main .footer-wrapper .content .box {
@@ -77,6 +77,12 @@
 .footer .footer-main .footer-wrapper .content .box li a {
   color: #fff;
   font-weight: 500;
+  transition: 300ms;
+}
+
+.footer .footer-main .footer-wrapper .content .box li a:hover {
+  color: #fcb83f;
+  font-weight: 500;
 }
 
 .footer .footer-main .footer-wrapper .content .box h5 {
@@ -108,4 +114,16 @@
   .footer .footer-main .footer-wrapper .content .box {
     width: 80%;
   }
+}
+
+/* login / register */
+
+.login {
+  background-color: #fff;
+}
+
+.login .login-wrapper {
+  display: flex;
+  justify-self: center;
+  width: 80%;
 }

@@ -67,6 +67,21 @@
                 </ul>
               </div>
             </div>
+            <div class="box">
+              <h5>Populair</h5>
+              <div class="tekst">
+                <ul>
+                  <li><a href="#">Jongeren Vakantie</a></li>
+                  <li><a href="#">Ouderen Vakantie</a></li>
+                  <li><a href="#">family Vakantie</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="box">
+              <h5>Zo in je mailbox!</h5>
+              Meld je hier aan voor
+              <a href="#">onze nieuwsbrief</a>
+            </div>
           </div>
         </div>
       </div>
