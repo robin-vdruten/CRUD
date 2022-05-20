@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --maincolor: #70cdf4;
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--maincolor);
+}
+
+.footer .footer-main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-main .footer-wrapper {
+  width: 80%;
+}
+
+.footer .footer-main .footer-wrapper .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0rem;
+}
+
+.footer .footer-main .footer-wrapper .content .box {
+  margin-bottom: 40px;
+  font-size: 0.9375em;
+  line-height: 1.618;
+  color: #fff;
+}
+
+.footer .footer-main .footer-wrapper .content .box .icon-img {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 20px 20px 10px;
+}
+
+.footer .footer-main .footer-wrapper .content .box .row {
+  display: flex;
+}
+
+.footer .footer-main .footer-wrapper .content .box .tekst {
+  font-size: 15px;
+}
+
+.footer .footer-main .footer-wrapper .content .box .tekst .row i {
+  font-size: 22px;
+}
+
+.footer .footer-main .footer-wrapper .content .box .tekst .row li {
+  margin-right: 7px;
+}
+
+.footer .footer-main .footer-wrapper .content .box ul {
+  list-style: none;
+}
+
+.footer .footer-main .footer-wrapper .content .box li {
+  line-height: 1.618;
+  list-style: none;
+}
+
+.footer .footer-main .footer-wrapper .content .box li a {
+  color: #fff;
+  font-weight: 500;
+  transition: 300ms;
+}
+
+.footer .footer-main .footer-wrapper .content .box li a:hover {
+  color: #fcb83f;
+  font-weight: 500;
+}
+
+.footer .footer-main .footer-wrapper .content .box h5 {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer .footer-main .footer-wrapper .content .box a {
+  color: #fcb83f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer .footer-bottom {
+  background-color: #fcb83f;
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+
+.footer .footer-bottom .bottom-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 500px) {
+  .footer .footer-main .footer-wrapper .content .box {
+    width: 80%;
+  }
+}
+
+/* login / register */
+
+.login {
+  background-color: #fff;
+}
+
+.login .login-wrapper {
+  display: flex;
+  justify-self: center;
+  width: 80%;
+}
