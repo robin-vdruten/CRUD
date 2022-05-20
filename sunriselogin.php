@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php include 'Includes/head.php';
-    head("sunrise login");
+  <?php
+  include 'Includes/head.php';
+  head('sunrise login');
   ?>
   <body>
     <section class="login">
