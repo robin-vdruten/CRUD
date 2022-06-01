@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sunrise login</title>
-    <link rel="stylesheet" href="CSS/styles.css" />
-  </head>
+  <?php
+  include 'Includes/head.php';
+  head('sunrise login', '');
+  ?>
   <body>
     <section class="login">
-      <div class="login-wrapper"></div>
+      <div class="login-wrapper">
+            <form action="PHP/login.php" class="form" id="form" method="POST">
+                <label for="email">Adminname</label>
+                <input type="tekst" id="email" name="login" />
+                <label for="password">Password</label>
+                <input type="" id="password" name="password" />
+                <input type="submit" id="submit" value="Submit" />
+                </form>
+      </div>
     </section>
+    <?php include 'Includes/footer.php'; ?>
   </body>
 </html>
