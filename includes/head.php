@@ -13,6 +13,7 @@ function head($title, $icon)
     src="https://kit.fontawesome.com/143048b42c.js"
     crossorigin="anonymous"
   ></script>
+  <script src="js/main.js"></script>
 </head>
 
 <?php
