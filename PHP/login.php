@@ -20,10 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':naam', $naam);
         $stmt->bindParam(':wachtwoord', $wachtwoord);
         $stmt->execute();
+        $user = $stmt->fetch();
         if ($stmt->rowCount() == 1) {
-            redirect('../admin/admin.php');
+            if ($user['admin'] == 1) {
+                $_SESSION['admin'] = 'admin';
+                redirect('../admin/admin.php');
+            } elseif ($user['admin'] == 0) {
+                redirect('../index.php');
+            }
         } else {
-            redirect('../index.php');
+            redirect('../sunriselogin.php');
         }
     }
 }
