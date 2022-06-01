@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,800"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
     <header>
       <div class="up-head">
-        <img src="../images/sun-back.gif" height="130px" alt="SunRise" />
+        <a href="index.php">
+                  <img src="Images/sun-back.gif" height="130px" alt="SunRise" />
+        </a>
         <div class="center">
           <nav>
             <div class="search-box">
@@ -46,7 +34,7 @@
               <a href="#"
                 ><i class="fa-solid fa-heart" style="color: red"></i
               ></a>
-              <a href="#"><i class="fa-solid fa-user"></i></a>
+              <a href="sunriselogin.php"><i class="fa-solid fa-user"></i></a>
             </div>
           </nav>
         </div>
@@ -262,17 +250,7 @@
           </div>
         </div>
         <video autoplay loop muted>
-          <source src="../images/Beach - 63983.mp4" type="video/mp4" />
+          <source src="images/Beach - 63983.mp4" type="video/mp4" />
         </video>
       </div>
     </header>
-    <body>
-      //
-    </body>
-    <script src="../js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/143048b42c.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>

@@ -5,6 +5,7 @@
   head('sunrise login', '');
   ?>
   <body>
+      <?php include 'includes/header.php'; ?>
     <section class="login">
       <div class="login-wrapper">
             <form action="PHP/login.php" class="form" id="form" method="POST">
