@@ -1,6 +1,5 @@
 <?php
-
-include '../includes/connector.php';
+include_once '../includes/connector.php';
 include '../includes/util.php';
 
 global $conn;
@@ -23,9 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user = $stmt->fetch();
         if ($stmt->rowCount() == 1) {
             if ($user['admin'] == 1) {
-                $_SESSION['admin'] = 'admin';
+                session_start();
+                $_SESSION['admin'] = true;
+                $_SESSION['naam'] = $user['voornaam'];
                 redirect('../admin/admin.php');
             } elseif ($user['admin'] == 0) {
+                session_start();
+                $_SESSION['naam'] = $user['voorna   am'];
                 redirect('../index.php');
             }
         } else {

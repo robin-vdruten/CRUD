@@ -386,6 +386,10 @@ header input {
   padding: 10px;
 }
 
+.dropdown li {
+  list-style: none;
+}
+
 .dropdown li a {
   list-style: none;
   color: black;
