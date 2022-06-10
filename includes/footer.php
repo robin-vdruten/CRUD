@@ -1,7 +1,5 @@
 <?php
-$page = basename($_SERVER['PHP_SELF']);
-session_start();
-?>
+$page = basename($_SERVER['PHP_SELF']); ?>
 <section class="footer">
   <div class="footer-main">
     <div class="footer-wrapper">

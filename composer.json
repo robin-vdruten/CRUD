@@ -1,0 +1,7 @@
+{
+    "require": {
+        "psr/log": "^3.0",
+        "league/oauth2-client": "^2.6",
+        "phpmailer/phpmailer": "^6.6"
+    }
+}

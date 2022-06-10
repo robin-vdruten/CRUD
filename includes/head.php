@@ -13,8 +13,8 @@ function head($title, $icon)
     src="https://kit.fontawesome.com/143048b42c.js"
     crossorigin="anonymous"
   ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </head>
-
 <?php
 } ?>
