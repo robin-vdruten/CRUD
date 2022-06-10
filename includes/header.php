@@ -35,6 +35,12 @@
                 ><i class="fa-solid fa-heart" style="color: red"></i
               ></a>
               <a href="sunriselogin.php"><i class="fa-solid fa-user"></i></a>
+                <?php if (!empty($_SESSION['naam'])) {
+                    echo '<a href="userprofile.php">' .
+                        $_SESSION['naam'] .
+                        '</a>';
+                    echo '<a href="PHP/logout.php">logout</a>';
+                } ?>
             </div>
           </nav>
         </div>
