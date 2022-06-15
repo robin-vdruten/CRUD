@@ -20,7 +20,7 @@ signupButton.addEventListener("click", (e) => {
 });
 
 $("#register-submit").submit(function (e) {
-  e.preventDefault(); // avoid to execute the actual submit of the form.
+  e.preventDefault();
 
   var form = $(this);
 
@@ -49,9 +49,15 @@ $("#login-submit").submit(function (e) {
   $.ajax({
     type: "POST",
     url: "PHP/login.php",
-    data: form.serialize(), // serializes the form's elements.
+    data: form.serialize(),
     success: function (data) {
-      $("#error").append("<p>" + data + "</p>");
+      if (data == "admin") {
+        window.location.replace("../admin/admin.php");
+      } else if (data == "user") {
+        window.location.replace("index.php");
+      } else {
+        $("#error").append("<p>" + data + "</p>");
+      }
     },
     fail: function (xhr, textStatus, errorThrown) {
       alert("request failed");

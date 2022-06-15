@@ -27,11 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['admin'] = true;
                 $_SESSION['loggedin'] = true;
                 $_SESSION['naam'] = $user['voornaam'];
+                $_SESSION['userID'] = $user['userID'];
+                $oops = 'admin';
+                echo $oops;
+                return $oops;
                 redirect('../admin/admin.php');
             } elseif ($user['admin'] == 0) {
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['naam'] = $user['voornaam'];
+                $_SESSION['userID'] = $user['userID'];
+                $oops = 'user';
+                echo $oops;
+                return $oops;
                 redirect('../index.php');
             }
         } else {
