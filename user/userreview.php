@@ -58,6 +58,11 @@ if (isset($_GET['id'])) {
               <li>
                 <a href="userprofile.php"> <i class="fa fa-user"></i> Profile</a>
               </li>
+              <?php if (isset($_SESSION['admin'])) { ?>
+                  <li>
+                    <a href="../admin/admin.php"> <i class="fa fa-user"></i>Admin page</a>
+                  </li>
+              <?php } ?>
               <li class="active">
                 <a href="userreview.php?id=<?php echo $row['userID']; ?>">
                   <i class="fa fa-calendar"></i> Reviews

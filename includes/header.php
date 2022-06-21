@@ -30,7 +30,6 @@
               <button><a href="#">Contact</a></button>
             </div>
             <div class="misc-buttons">
-              <a href="#"><i class="fa-solid fa-eye"></i></a>
               <a href="#"
                 ><i class="fa-solid fa-heart" style="color: red"></i
               ></a>

@@ -9,7 +9,7 @@ function recensies($id)
     $stmt->execute();
     $recensie = $stmt->fetchAll();
 
-    foreach ($recensie as $rec => $value) { ?>
+    foreach ($recensie as $key => $value) { ?>
                 <p><?php echo $value['titel']; ?></p>
                 <p><?php echo $value['datum']; ?></p>
                 <p><?php echo $value['text']; ?></p>

@@ -52,7 +52,7 @@ $("#login-submit").submit(function (e) {
     data: form.serialize(),
     success: function (data) {
       if (data == "admin") {
-        window.location.replace("../admin/admin.php");
+        window.location.replace("admin/admin.php");
       } else if (data == "user") {
         window.location.replace("index.php");
       } else {
