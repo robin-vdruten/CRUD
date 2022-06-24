@@ -479,3 +479,40 @@ ul.summary-list > li:last-child {
 .fixformreis {
   width: 50%;
 }
+
+.containercon {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, auto));
+}
+
+.containercon .box {
+  height: auto;
+  min-height: 200px;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.containercon .box .header,
+.containercon .box .bericht,
+.containercon .box .actions {
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  margin-right: 5px;
+}
+
+.button {
+  background-color: var(--maincolor); /* Green */
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

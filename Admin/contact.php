@@ -5,7 +5,7 @@ use utilphp\util;
 
 include 'includes/session.php';
 include '../includes/connector.php';
-include 'PHP/reizen.php';
+include 'PHP/contact.php';
 
 global $conn;
 
@@ -58,10 +58,10 @@ $row = $stmt->fetch();
               <li>
                 <a href="recensie.php"> <i class="fa fa-calendar-days"></i> Recensie</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="contact.php"> <i class="fa fa-envelope"></i> </i> contact</a>
               </li>
-              <li class="active">
+              <li>
                 <a href="reizen.php"> <i class="fa fa-plane"></i> Reizen</a>
               </li>
               <li>
@@ -85,21 +85,17 @@ $row = $stmt->fetch();
         </div>
         <div class="profile-info col-md-9">
           <div class="panel">
-            <div class="bio-graph-heading">Reizen</div>
+            <div class="bio-graph-heading">Contact</div>
             <div class="panel-body bio-graph-info">
-              <h1>Reizen</h1>
-              <form method="post" class="show" action="PHP/reizen.php">
-                <input type="hidden" name="show" />
-                <input type="submit" class="show button" value="nieuwe reis" />
-              </form>
+              <h1>Contact</h1>
               <div class="row">
                 <div class="bio-row fixreis">
-                  <p>
+                  <div class="containercon">
                     <?php
-                    $reizen = new Reizen();
-                    $reizen->rezien();
+                    $contact = new contact();
+                    $contact->contact();
                     ?>
-                  </p>
+                    </div>
                 </div>
               </div>
             </div>
@@ -109,6 +105,6 @@ $row = $stmt->fetch();
         </div>
       </div>
     </div>
-        <script type="text/javascript" src="../JS/reizen.js"></script>
+        <script type="text/javascript" src="../JS/contact.js"></script>
   </body>
 </html>

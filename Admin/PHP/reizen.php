@@ -1,63 +1,61 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!isset($_POST['edit'])) {
-        if (isset($_POST['update'])) {
-            include_once '../../includes/connector.php';
+    if (isset($_POST['update'])) {
+        include_once '../../includes/connector.php';
 
-            $sql = 'SELECT * FROM reizen where reisID = ' . $_POST['id'];
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $reizen = $stmt->fetch();
+        $sql = 'SELECT * FROM reizen where reisID = ' . $_POST['id'];
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $reizen = $stmt->fetch();
 
-            $backup = '';
+        $backup = '';
 
-            if (!empty($_FILES['file_up']['tmp_name'])) {
-                $foto = $_FILES['file_up']['tmp_name'];
-            } else {
-                $foto = '';
-                $backup = $reizen['foto'];
-            }
-
-            $update = new reizen();
-            $update->update(
-                $_POST['id'],
-                $_POST['startDatum'],
-                $_POST['eindDatum'],
-                $_POST['prijs'],
-                $_POST['hotel'],
-                $foto,
-                $backup,
-                $_POST['plaats'],
-                $_POST['personen'],
-                $_POST['land']
-            );
-        } elseif (isset($_POST['create'])) {
-            $picture = $_FILES['file_up']['tmp_name'];
-            $foto = fopen($picture[0], 'rb');
-            $items = [
-                $_POST['startDatum'],
-                $_POST['eindDatum'],
-                $_POST['prijs'],
-                $_POST['hotel'],
-                $_POST['plaats'],
-                $_POST['personen'],
-                $_POST['land'],
-            ];
-            $create = new reizen();
-            $create->create($items, $foto);
-        } elseif (isset($_POST['delete'])) {
-            $id = $_POST['id'];
-            $delete = new reizen();
-            $delete->delete($id);
-        } elseif (isset($_POST['show'])) {
-            $show = new reizen();
-            $show->show();
+        if (!empty($_FILES['file_up']['tmp_name'])) {
+            $foto = $_FILES['file_up']['tmp_name'];
         } else {
-            $id = $_POST['id'];
-            $edit = new reizen();
-            $edit->edit($id);
+            $foto = '';
+            $backup = $reizen['foto'];
         }
+
+        $update = new reizen();
+        $update->update(
+            $_POST['id'],
+            $_POST['startDatum'],
+            $_POST['eindDatum'],
+            $_POST['prijs'],
+            $_POST['hotel'],
+            $foto,
+            $backup,
+            $_POST['plaats'],
+            $_POST['personen'],
+            $_POST['land']
+        );
+    } elseif (isset($_POST['create'])) {
+        $picture = $_FILES['file_up']['tmp_name'];
+        $foto = fopen($picture[0], 'rb');
+        $items = [
+            $_POST['startDatum'],
+            $_POST['eindDatum'],
+            $_POST['prijs'],
+            $_POST['hotel'],
+            $_POST['plaats'],
+            $_POST['personen'],
+            $_POST['land'],
+        ];
+        $create = new reizen();
+        $create->create($items, $foto);
+    } elseif (isset($_POST['delete'])) {
+        $id = $_POST['id'];
+        $delete = new reizen();
+        $delete->delete($id);
+    } elseif (isset($_POST['show'])) {
+        $show = new reizen();
+        $show->show();
+    } else {
+        $id = $_POST['id'];
+        $edit = new reizen();
+        $edit->edit($id);
     }
 }
 
@@ -91,7 +89,7 @@ class reizen
         echo '<input type="hidden" name="create" value="create">';
         echo '<div>';
         echo '<label>hotelnaam</label>';
-        echo '<input type="text" name="hotel" />';
+        echo '<input type="text" name="hotel" required />';
         echo '</div>';
         echo '<div>';
         echo '<label>land</label>';
@@ -103,11 +101,11 @@ class reizen
         echo '</div>';
         echo '<div>';
         echo '<label>startDatum</label>';
-        echo '<input type="date"  name="startDatum" />';
+        echo '<input class="checkin-date"  type="date"  name="startDatum" />';
         echo '</div>';
         echo '<div>';
         echo '<label>eindDatum</label>';
-        echo '<input type="date"   name="eindDatum" />';
+        echo '<input class="checkin-date" type="date"   name="eindDatum" />';
         echo '</div>';
         echo '<div>';
         echo '<label>plaats</label>';
@@ -164,11 +162,15 @@ class reizen
         echo '</div>';
         echo '<div>';
         echo '<label>startDatum</label>';
-        echo '<input value="' . $reizen['startDatum'] . ' " name=startDatum />';
+        echo '<input type="data" value="' .
+            $reizen['startDatum'] .
+            ' " name=startDatum />';
         echo '</div>';
         echo '<div>';
         echo '<label>eindDatum</label>';
-        echo '<input value="' . $reizen['eindDatum'] . ' " name=eindDatum />';
+        echo '<input type="data" value="' .
+            $reizen['eindDatum'] .
+            ' " name=eindDatum />';
         echo '</div>';
         echo '<div>';
         echo '<label>plaats</label>';
