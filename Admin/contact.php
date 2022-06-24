@@ -5,6 +5,7 @@ use utilphp\util;
 
 include 'includes/session.php';
 include '../includes/connector.php';
+include 'PHP/contact.php';
 
 global $conn;
 
@@ -18,14 +19,21 @@ $row = $stmt->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
     <?php
     include '../user/includes/head.php';
     head('sunrise login en register', '');
     ?>
-  </head>
+    </head>
   <body class="profile">
       <img src="../Images/sun-back.gif" class="sunrise" height="130px" alt="SunRise" />
+      <div id="create-section" class="edit closed create-section">
+          <div id="formplek" class="edit-wrap">
+            <div id=updatevlieg>
+
+</div>
+          </div>
+        </div>
     <div class="container bootstrap snippets bootdey">
       <div class="row">
         <div class="profile-nav col-md-3">
@@ -43,14 +51,14 @@ $row = $stmt->fetch();
                 <a href="../user/userprofile.php"> <i class="fa fa-user"></i> Profile</a>
               </li>
               <?php if (isset($_SESSION['admin'])) { ?>
-                  <li class="active">
+                  <li>
                     <a href="../admin/admin.php"> <i class="fa fa-user"></i>Admin page</a>
                   </li>
               <?php } ?>
               <li>
                 <a href="recensie.php"> <i class="fa fa-calendar-days"></i> Recensie</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="contact.php"> <i class="fa fa-envelope"></i> </i> contact</a>
               </li>
               <li>
@@ -77,39 +85,26 @@ $row = $stmt->fetch();
         </div>
         <div class="profile-info col-md-9">
           <div class="panel">
-            <div class="bio-graph-heading">Admin account</div>
+            <div class="bio-graph-heading">Contact</div>
             <div class="panel-body bio-graph-info">
-              <h1>Account</h1>
+              <h1>Contact</h1>
               <div class="row">
-                <div class="bio-row">
-                  <p>
-                    <span>First Name</span>:
-                    <?php echo $row['voornaam']; ?>
-                  </p>
-                </div>
-                <div class="bio-row">
-                  <p>
-                    <span>Last Name </span>:
-                    <?php echo $row['achternaam']; ?>
-                  </p>
-                </div>
-                <div class="bio-row">
-                  <p>
-                    <span>Email </span>:
-                    <?php echo $row['email']; ?>
-                  </p>
-                </div>
-                <div class="bio-row">
-                  <p><span>Mobile </span>: (12) 03 4567890</p>
+                <div class="bio-row fixreis">
+                  <div class="containercon">
+                    <?php
+                    $contact = new contact();
+                    $contact->contact();
+                    ?>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            
           </div>
         </div>
       </div>
     </div>
+        <script type="text/javascript" src="../JS/contact.js"></script>
   </body>
 </html>

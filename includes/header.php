@@ -30,13 +30,12 @@
               <button><a href="#">Contact</a></button>
             </div>
             <div class="misc-buttons">
-              <a href="#"><i class="fa-solid fa-eye"></i></a>
               <a href="#"
                 ><i class="fa-solid fa-heart" style="color: red"></i
               ></a>
               <a href="sunriselogin.php"><i class="fa-solid fa-user"></i></a>
                 <?php if (!empty($_SESSION['naam'])) {
-                    echo '<a href="userprofile.php">' .
+                    echo '<a href="user/userprofile.php">' .
                         $_SESSION['naam'] .
                         '</a>';
                     echo '<a href="PHP/logout.php">logout</a>';

@@ -3,31 +3,29 @@
 use util as GlobalUtil;
 use utilphp\util;
 
-include 'includes/usersession.php';
-include 'includes/connector.php';
+include '../includes/usersession.php';
+include '../includes/connector.php';
 
 global $conn;
 
 $naam = $_SESSION['naam'];
 
 $qeury = 'SELECT * FROM users WHERE voornaam = :voornaam';
-$stmt = $conn->prepare($qeury); $stmt->bindParam(':voornaam', $naam);
-$stmt->execute(); $row = $stmt->fetch(); ?>
+$stmt = $conn->prepare($qeury);
+$stmt->bindParam(':voornaam', $naam);
+$stmt->execute();
+$row = $stmt->fetch();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
     <?php
-    include 'Includes/head.php';
+    include 'includes/head.php';
     head('sunrise login en register', '');
     ?>
   </head>
   <body class="profile">
-      <img src="Images/sun-back.gif" class="sunrise" height="130px" alt="SunRise" />
+      <img src="../Images/sun-back.gif" class="sunrise" height="130px" alt="SunRise" />
     <div class="container bootstrap snippets bootdey">
       <div class="row">
         <div class="profile-nav col-md-3">
@@ -42,26 +40,37 @@ $stmt->execute(); $row = $stmt->fetch(); ?>
 
             <ul class="nav nav-pills nav-stacked">
               <li class="active">
-                <a href="#"> <i class="fa fa-user"></i> Profile</a>
+                <a href="userprofile.php"> <i class="fa fa-user"></i> Profile</a>
               </li>
+              <?php if (isset($_SESSION['admin'])) { ?>
+                  <li>
+                    <a href="../admin/admin.php"> <i class="fa fa-user"></i>Admin page</a>
+                  </li>
+              <?php } ?>
               <li>
-                <a href="#">
+                <a href="userreview.php?id=<?php echo $row['userID']; ?>">
                   <i class="fa fa-calendar"></i> Reviews
                   <span class="label label-warning pull-right r-activity"
-                    >9</span
+                    ><?php
+                    include 'PHP/recensie.php';
+                    $count = new recensie();
+                    $count->getRowsNumber($row['userID']);
+                    ?></span
                   ></a
                 >
               </li>
               <li>
-                <a href="#"> <i class="fa fa-edit"></i> Edit profile</a>
+                <a href="usereditprofile.php?id=<?php echo $row[
+                    'userID'
+                ]; ?>"> <i class="fa fa-edit"></i> Edit profile</a>
               </li>
               <li>
-                <a href="index.php">
+                <a href="../index.php">
                   <i class="fa fa-home"></i> Sunrise homepage</a
                 >
               </li>
               <li>
-                <a href="PHP/logout.php">
+                <a href="../PHP/logout.php">
                   <i class="fas fa-sign-out-alt"></i> Log out</a
                 >
               </li>

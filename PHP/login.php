@@ -27,11 +27,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['admin'] = true;
                 $_SESSION['loggedin'] = true;
                 $_SESSION['naam'] = $user['voornaam'];
-                redirect('../admin/admin.php');
+                $_SESSION['userID'] = $user['userID'];
+                $_SESSION['email'] = $user['email'];
+                $oops = 'admin';
+                echo $oops;
+                return $oops;
+                redirect('admin/admin.php');
             } elseif ($user['admin'] == 0) {
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['naam'] = $user['voornaam'];
+                $_SESSION['userID'] = $user['userID'];
+                $_SESSION['email'] = $user['email'];
+                $oops = 'user';
+                echo $oops;
+                return $oops;
                 redirect('../index.php');
             }
         } else {
@@ -42,9 +52,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
-
-// function printError(): string
-// {
-//     global $error;
-//     return $error;
-// }
