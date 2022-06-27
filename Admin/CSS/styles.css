@@ -51,7 +51,7 @@ body.profile {
   display: inline-block;
 }
 
-.profile-nav .user-heading a img {
+.profile-nav .user-heading a div {
   width: 112px;
   height: 112px;
   border-radius: 50%;
@@ -487,7 +487,7 @@ ul.summary-list > li:last-child {
 
 .containercon .box {
   height: auto;
-  min-height: 200px;
+  min-height: 160px;
   width: 80%;
   border: 1px solid black;
   border-radius: 8px;
@@ -515,4 +515,37 @@ ul.summary-list > li:last-child {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.tableuser {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tableuser thead tr {
+  background-color: var(--maincolor);
+  color: #ffffff;
+  text-align: left;
+}
+
+.tableuser th,
+.tableuser td {
+  padding: 12px 15px;
+}
+
+.tableuser tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tableuser tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.tableuser tbody tr:last-of-type {
+  border-bottom: 2px solid var(--maincolor);
 }

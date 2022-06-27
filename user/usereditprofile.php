@@ -52,7 +52,7 @@ if (isset($_GET['id'])) {
           <div class="panel">
             <div class="user-heading round">
               <a href="#">
-                <img src="//" alt="" />
+                <div></div>
               </a>
               <h1><?php echo $row['voornaam']; ?></h1>
               <p><?php echo $row['email']; ?></p>
@@ -124,10 +124,10 @@ if (isset($_GET['id'])) {
                      ]; ?>"/>
                 </div>
                 <div class="bio-row">
-                  <p><span>Mobile </span>: (12) 03 4567890</p>
+                  <p><span>account</span></p>
                 </div>
                 <div class="bio-row">
-                  <p><input type="submit" name="change" value="change">
+                  <p><input type="submit" class="button" name="change" value="change">
                 </p>
                 </div>
             </form>
@@ -137,7 +137,7 @@ if (isset($_GET['id'])) {
                 <input type="hidden" name="id" value="<?php echo $row[
                     'userID'
                 ]; ?>">
-                <input type="submit" id="resetpassword" name="passwordreset" value="reset password">
+                <input type="submit" id="resetpassword" class="button" name="passwordreset" value="reset password">
                 <div id="errorreset"></div>
             </form>
             </div>
@@ -153,7 +153,7 @@ if (isset($_GET['id'])) {
                             <input type="text" name="passreset" value=""/>
                             <p>herhaal nieuw password</p>
                             <input type="text" name="passtest" value=""/>
-                            <input type="submit" name="passwordreset" value="change">
+                            <input type="submit" class="button" name="passwordreset" value="change">
                         </form>
                     </div>
                 </div>

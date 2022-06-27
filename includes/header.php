@@ -25,13 +25,18 @@
           </div>
         </div>
         <div class="main-buttons">
-          <button id="home-btn"><a href="index.php">Home</a></button>
           <button><a href="overons.php">Over Ons</a></button>
           <button><a href="informatie.php">Informatie</a></button>
           <button><a href="contact.php">Contact</a></button>
         </div>
         <div class="misc-buttons">
           <a href="sunriselogin.php"><i class="fa-solid fa-user"></i></a>
+          <?php if (!empty($_SESSION['naam'])) {
+              echo '<a href="user/userprofile.php">' .
+                  $_SESSION['naam'] .
+                  '</a>';
+              echo '<a href="PHP/logout.php">logout</a>';
+          } ?>
         </div>
       </nav>
       <div class="align-search2">
