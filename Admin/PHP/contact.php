@@ -90,9 +90,6 @@ class contact
                 <div class="header"><h5><?php echo $value[
                     'email'
                 ]; ?></h5></div>
-                <div class="bericht"><p><?php echo $value[
-                    'bericht'
-                ]; ?></p></div>
                 <div class="actions">
                     <form  class="contact delete" id="delete" action="#" method="POST">
                       <input type="hidden" value="<?php echo $value[
