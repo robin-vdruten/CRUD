@@ -8,7 +8,7 @@
         <div class="search-box">
           <div class="align-search">
             <form
-              action="../php/menu-search.php"
+              action="PHP/bookshowsearch.php"
               method="get"
               class="form-search"
             >
@@ -30,7 +30,6 @@
           <button><a href="contact.php">Contact</a></button>
         </div>
         <div class="misc-buttons">
-          <a href="#"><i class="fa-solid fa-heart" style="color: red"></i></a>
           <a href="sunriselogin.php"><i class="fa-solid fa-user"></i></a>
           <?php if (!empty($_SESSION['naam'])) {
               echo '<a href="user/userprofile.php">' .
@@ -40,17 +39,34 @@
           } ?>
         </div>
       </nav>
+      <div class="align-search2">
+        <form
+          action="PHP/bookshowsearch.php"
+          method="get"
+          class="form-search"
+        >
+          <input
+            class="search-nav"
+            type="text"
+            placeholder=" Zoeken.."
+            name="search"
+          />
+          <button type="submit" class="button-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
   <div class="down-head">
     <div class="out-book">
       <div class="in-book">
         <div class="wrapper-book">
-          <form class="nav-form" action="" method="POST">
+          <form class="nav-form" action="//////HIER/////" method="POST">
             <div class="option-book vakantietype">
               <label for=""
-                ><i class="fa-solid fa-umbrella-beach"></i
-                >&nbsp;Vakantietype</label
+                ><i class="fa-solid fa-location-dot"></i
+                >&nbsp;Land</label
               >
               <input
                 type="text"
@@ -61,123 +77,11 @@
               <div class="dropping">
                 <div class="drop-book1"></div>
                 <div class="drop-book2">
-                  <h3>Kies jouw type vakantie</h3>
+                  <h3>Kies jouw Land bestemming</h3>
                   <br />
                   <div class="book-sort">
                     <div class="dropdown">
                       <ul>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Alle vakanties</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >All inclusive</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Autovakanties</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Fly-drive vakanties</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Last minute</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="dropdown">
-                      <ul>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Rondreizen</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Stedentrip</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Vliegvakantie</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Wintersport</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Zonvakanties</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="option-book Bestemming">
-              <label for=""
-                ><i class="fa-solid fa-location-dot"></i>&nbsp;Bestemming</label
-              >
-              <input
-                type="text"
-                class="collapsible"
-                placeholder="Geen voorkeur"
-                id="insert-bestemming"
-              />
-              <div class="dropping2" style="display:none">
-                <div class="drop-book1"></div>
-                <div class="drop-book2">
-                  <h3>Populaire bestemmingen</h3>
-                  <br />
-                  <div class="book-sort">
-                    <div class="dropdown">
-                      <ul>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Alle bestemmingen</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Spanje</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Turkije</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Kaapverdië</a
-                          >
-                        </li>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Griekenland</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="dropdown">
-                      <ul>
-                        <li>
-                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Curaçao</a
-                          >
-                        </li>
                         <li>
                           <i class="fa-solid fa-angle-right"></i>&nbsp;<a
                             >Aruba</a
@@ -190,12 +94,95 @@
                         </li>
                         <li>
                           <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Canarische Eilanden</a
+                            >Curaçao</a
                           >
                         </li>
                         <li>
                           <i class="fa-solid fa-angle-right"></i>&nbsp;<a
-                            >Egypte</a
+                            >Nederlands</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Belgie</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="dropdown">
+                      <ul>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Duitsland</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Engeland</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Schotland</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Japan</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Spanje</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="option-book Bestemming">
+              <label for=""
+                ><i class="fa-solid fa-hotel"></i>&nbsp;Hotel</label
+              >
+              <input
+                type="text"
+                class="collapsible"
+                placeholder="Geen voorkeur"
+                id="insert-bestemming"
+              />
+              <div class="dropping2" style="display: none">
+                <div class="drop-book1"></div>
+                <div class="drop-book2">
+                  <h3>Alleen de beste hotels</h3>
+                  <br />
+                  <div class="book-sort">
+                    <div class="dropdown">
+                      <ul>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Culinair's</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Hertog</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Bing Chiling</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Liam's hotel</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-angle-right"></i>&nbsp;<a
+                            >Robin's hotel</a
                           >
                         </li>
                       </ul>
@@ -206,7 +193,7 @@
             </div>
             <div class="option-book Wanneer">
               <label for=""
-                ><i class="fa-solid fa-calendar-day"></i>&nbsp;Wanneer?</label
+                ><i class="fa-solid fa-calendar-day"></i>&nbsp;Wanneer</label
               >
               <input
                 type="datetime-local"
@@ -217,10 +204,10 @@
             </div>
             <div class="option-book wie">
               <label for=""
-                ><i class="fa-solid fa-user-group"></i>&nbsp;Wie?</label
+                ><i class="fa-solid fa-user-group"></i>&nbsp;Hoeveel personen</label
               >
               <input
-                type="text"
+                type="number"
                 class="collapsible"
                 placeholder="Geen voorkeur"
               />

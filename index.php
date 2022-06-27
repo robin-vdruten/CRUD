@@ -18,9 +18,15 @@ session_start(); ?>
         </div>
         <div class="main-wrap-up">
           <div class="main-wrap-up-left">
-            <div class="main-wrap-image-flight">
-              <img src="../CRUD/images/placeholder-sunrise.png" alt="#" />
-            </div>
+            
+              <div class="main-wrap-image-flight">
+                <img src="../CRUD/images/placeholder-sunrise.png" alt="#" />
+                <div class="test-13">
+                  <h4>jajaj</h4>
+                </div>
+                
+              </div>
+            
             <div class="main-wrap-image-flight">
               <img src="../CRUD/images/placeholder-sunrise.png" alt="#" />
             </div>
