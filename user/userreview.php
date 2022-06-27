@@ -48,7 +48,7 @@ if (isset($_GET['id'])) {
           <div class="panel">
             <div class="user-heading round">
               <a href="#">
-                <img src="//" alt="" />
+                <div></div>
               </a>
               <h1><?php echo $row['voornaam']; ?></h1>
               <p><?php echo $row['email']; ?></p>
@@ -126,12 +126,18 @@ if (isset($_GET['id'])) {
           <div>
             <div class="row">
               <div class="bio-graph-heading">Reviews</div>
-                <?php recensies($row['userID']); ?>
+              <div class="containercon pad">
+                <?php
+                $recensie = new Recensie();
+                $recensie->recensies($row['userID']);
+                ?>
+              </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="../JS/recensie.js"></script>
   </body>
 </html>

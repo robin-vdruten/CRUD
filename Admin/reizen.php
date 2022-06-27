@@ -40,7 +40,7 @@ $row = $stmt->fetch();
           <div class="panel">
             <div class="user-heading round">
               <a href="#">
-                <img src="//" alt="" />
+                <div></div>
               </a>
               <h1><?php echo $row['voornaam']; ?></h1>
               <p><?php echo $row['email']; ?></p>

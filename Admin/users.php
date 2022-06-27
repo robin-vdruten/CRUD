@@ -5,7 +5,7 @@ use utilphp\util;
 
 include 'includes/session.php';
 include '../includes/connector.php';
-include 'PHP/recensie.php';
+include 'PHP/users.php';
 
 global $conn;
 
@@ -55,7 +55,7 @@ $row = $stmt->fetch();
                     <a href="../admin/admin.php"> <i class="fa fa-user"></i>Admin page</a>
                   </li>
               <?php } ?>
-              <li class="active">
+              <li>
                 <a href="recensie.php"> <i class="fa fa-calendar-days"></i> Recensie</a>
               </li>
               <li>
@@ -67,7 +67,7 @@ $row = $stmt->fetch();
               <li>
                 <a href="bookingen.php"> <i class="fa fa-clipboard"></i> Bookingen</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="users.php"> <i class="fa fa-user"></i> Users</a>
               </li>
               <li>
@@ -85,29 +85,28 @@ $row = $stmt->fetch();
         </div>
         <div class="profile-info col-md-9">
           <div class="panel">
-            <div class="bio-graph-heading">Recensies</div>
+            <div class="bio-graph-heading">Users</div>
             <div class="panel-body bio-graph-info">
-              <h1>Recensies validatie</h1>
+              <h1>Users</h1>
               <div class="row">
                 <div class="bio-row fixreis">
-                  <div class="containercon">
-                    <?php
-                    $recensie = new Recensie();
-                    $recensie->validaterecensies();
-                    ?>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel-body bio-graph-info">
-              <h1>Recensies</h1>
-              <div class="row">
-                <div class="bio-row fixreis">
-                  <div class="containercon">
-                    <?php
-                    $recensie = new Recensie();
-                    $recensie->recensies();
-                    ?>
+                  <div class="pad">
+                      <table class="tableuser">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>voornaam</th>
+                                    <th>achternaam</th>
+                                    <th>email</th>
+                                    <th>admin</th>
+                                    <th>actions</th>
+                                </tr>
+                            </thead>
+                            <?php
+                            $users = new users();
+                            $users->users();
+                            ?>
+                      </table>
                     </div>
                 </div>
               </div>
@@ -118,6 +117,6 @@ $row = $stmt->fetch();
         </div>
       </div>
     </div>
-        <script type="text/javascript" src="../JS/recensie.js"></script>
+        <script type="text/javascript" src="../JS/users.js"></script>
   </body>
 </html>

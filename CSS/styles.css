@@ -558,9 +558,6 @@ header input {
   margin-right: 1em;
 }
 
-.main-wrap-image-flight img {
-}
-
 .main-wrap-upper,
 .main-wrap-downer {
   width: 100%;
@@ -780,7 +777,6 @@ textarea {
 }
 
 .submit-btn {
-  float: right;
   padding: 7px 35px;
   border-radius: 60px;
   display: inline-block;
@@ -814,9 +810,6 @@ textarea {
 .container-input input[type="checkbox"]:checked + label {
   color: #f00;
   font-style: normal;
-}
-
-.container-input {
 }
 
 .input-form-info {
@@ -921,7 +914,4 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.details {
 }
