@@ -514,6 +514,58 @@ header input {
   justify-content: space-between;
 }
 
+.align-search2 {
+  display: none;
+}
+.main-buttons #home-btn {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .up-head a img {
+    display: none;
+  }
+
+  .up-head {
+    height: auto;
+  }
+  .main-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .misc-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .in-book {
+    display: none;
+  }
+  .main-buttons #home-btn {
+    display: block;
+  }
+
+  .align-search {
+    display: none;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+  }
+  .align-search2 {
+    text-align: center;
+    margin-bottom: 1em;
+    display: block;
+  }
+  .down-head {
+    height: 0px;
+  }
+
+  .down-head video {
+    display: none;
+  }
+}
+
 .main-page {
   display: flex;
   justify-content: center;
@@ -556,9 +608,24 @@ header input {
   height: auto;
   margin-bottom: 1em;
   margin-right: 1em;
+  position: relative;
 }
 
-.main-wrap-image-flight img {
+.test-13 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  transition: 0.5s;
+  background-color: #f0f8ff57;
+}
+
+.test-13:hover {
+  transition: 0.5s;
+  background-color: #70ccf44d;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .main-wrap-upper,
@@ -628,6 +695,10 @@ header input {
   text-align: center;
 }
 
+.book-in-des {
+  margin-right: 1em;
+}
+
 .image-frame {
   height: 250px;
   width: 100%;
@@ -677,6 +748,7 @@ header input {
   height: 100%;
   transition: 0.5s;
   color: black;
+  background-color: #f0f8ff57;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -860,10 +932,12 @@ textarea {
 }
 
 .item-book-page {
-  height: 200px;
+  height: 100px;
   width: 100%;
   padding: 30px;
   background-color: #70cdf4;
+  display: flex;
+  justify-content: space-between;
 }
 
 .item-review-page {
@@ -924,4 +998,45 @@ textarea {
 }
 
 .details {
+}
+
+.item-leave-review button,
+.item-book-button button {
+  color: white;
+  background-color: #092a5e;
+  border-radius: 5px;
+  padding: 12px 48px;
+  transition: 0.5s;
+}
+
+.item-book-button button:hover {
+  background-color: #70cdf4;
+  transition: 0.5s;
+}
+
+.item-book-button,
+.item-leave-review {
+  width: auto;
+  height: auto;
+  margin-right: 2em;
+}
+
+.item-book-confirm {
+  display: flex;
+  align-items: center;
+}
+
+.item-book-confirm i {
+  font-size: 30px;
+  color: green;
+}
+
+.item-leave-review button:hover {
+  transition: 0.5s;
+  background-color: rgba(144, 238, 144, 0.4);
+}
+
+.left-item-book,
+.right-item-book {
+  display: flex;
 }
