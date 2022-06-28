@@ -99,6 +99,7 @@ session_start();
                   </div>
                 </div>
               </div>
+              <a href="https://privacypolicyvoorbeeld.nl/">Privacy Policy</a>
             </form>
           </div>
           <div class="right">

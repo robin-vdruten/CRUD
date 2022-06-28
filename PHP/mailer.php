@@ -14,14 +14,14 @@ if (isset($_POST['mailer'])) {
         $mail->isSMTP(); // Set mailer to use SMTP
         $mail->Host = 'smtp.office365.com'; // Specify main and backup SMTP servers
         $mail->SMTPAuth = true; // Enable SMTP authentication
-        $mail->Username = 'appelflapkipkerrie@outlook.com'; // SMTP username
+        $mail->Username = 'sunriserobindruten@outlook.com'; // SMTP username
         $mail->Password = '!sunrise1'; // SMTP password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 25;
         $mail->isHTML(true); // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('appelflapkipkerrie@outlook.com');
+        $mail->setFrom('sunriserobindruten@outlook.com');
         $mail->addAddress($_POST['email']);
 
         //Content
@@ -59,14 +59,14 @@ if (isset($_POST['resetpass'])) {
         $mail->isSMTP(); // Set mailer to use SMTP
         $mail->Host = 'smtp.office365.com'; // Specify main and backup SMTP servers
         $mail->SMTPAuth = true; // Enable SMTP authentication
-        $mail->Username = 'appelflapkipkerrie@outlook.com'; // SMTP username
+        $mail->Username = 'sunriserobindruten@outlook.com'; // SMTP username
         $mail->Password = '!sunrise1'; // SMTP password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 25;
         $mail->isHTML(true); // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('appelflapkipkerrie@outlook.com');
+        $mail->setFrom('sunriserobindruten@outlook.com');
         $mail->addAddress($_POST['email']);
 
         //Content
@@ -80,7 +80,7 @@ if (isset($_POST['resetpass'])) {
             'passwordreset=true' .
             '">reset password</a>' .
             ' Verzender: ' .
-            'appelflapkipkerrie@outlook.com' .
+            'sunriserobindruten@outlook.com' .
             '';
 
         $mail->send();

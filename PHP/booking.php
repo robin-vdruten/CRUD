@@ -27,16 +27,20 @@ class booking
     public function create($id)
     {
         session_start();
-        include_once '../includes/connector.php';
+        if (isset($_SESSION['naam'])) {
+            include_once '../includes/connector.php';
 
-        $sql =
-            'INSERT INTO booking (gebruikerID,reisID) VALUES (:gebruikerID,:reisID)';
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':gebruikerID', $_SESSION['userID']);
-        $stmt->bindParam(':reisID', $id);
-        $stmt->execute();
+            $sql =
+                'INSERT INTO booking (gebruikerID,reisID) VALUES (:gebruikerID,:reisID)';
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':gebruikerID', $_SESSION['userID']);
+            $stmt->bindParam(':reisID', $id);
+            $stmt->execute();
 
-        echo '<i class="fa-solid fa-check"></i>';
+            echo '<i class="fa-solid fa-check"></i>';
+        } else {
+            echo 'maak eerst een account aan';
+        }
     }
 
     public function createrecensie($items, $reisID)
