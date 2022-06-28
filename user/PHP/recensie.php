@@ -45,7 +45,9 @@ class recensie
 
     public function delete($id)
     {
-        include_once '../../includes/connector.php';
+        include_once '../includes/connector.php';
+
+        global $conn;
 
         $sql = 'DELETE FROM recensie WHERE recensieID = ' . $id;
         $stmt = $conn->prepare($sql);

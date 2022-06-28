@@ -62,7 +62,7 @@
     <div class="out-book">
       <div class="in-book">
         <div class="wrapper-book">
-          <form class="nav-form" action="//////HIER/////" method="POST">
+          <form class="nav-form" action="PHP/searchreis.php" method="POST">
             <div class="option-book vakantietype">
               <label for=""
                 ><i class="fa-solid fa-location-dot"></i
@@ -72,6 +72,7 @@
                 type="text"
                 class="collapsible"
                 placeholder="Geen voorkeur"
+                name="land"
                 id="insert-type"
               />
               <div class="dropping">
@@ -150,6 +151,7 @@
                 type="text"
                 class="collapsible"
                 placeholder="Geen voorkeur"
+                name="hotel"
                 id="insert-bestemming"
               />
               <div class="dropping2" style="display: none">
@@ -198,7 +200,7 @@
               <input
                 type="datetime-local"
                 id="date"
-                name="date_time"
+                name="date"
                 value=""
               />
             </div>
@@ -210,6 +212,7 @@
                 type="number"
                 class="collapsible"
                 placeholder="Geen voorkeur"
+                name="personen"
               />
             </div>
             <div class="book">
