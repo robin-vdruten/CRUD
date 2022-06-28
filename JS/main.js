@@ -30,7 +30,6 @@ const inputEen = document.querySelector("#insert-type");
 
 options.forEach((option) => {
   option.addEventListener("click", () => {
-    console.log("kaas");
     inputEen.value = option.innerHTML;
   });
 });
@@ -40,7 +39,6 @@ const inputTwo = document.querySelector("#insert-bestemming");
 
 options2.forEach((option2) => {
   option2.addEventListener("click", () => {
-    console.log("bitterbal");
     inputTwo.value = option2.innerHTML;
   });
 });

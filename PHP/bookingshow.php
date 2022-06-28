@@ -23,6 +23,7 @@ function search($search)
             method="get"
             class="linkshowform"
                 >';
+
         echo '<div class="image-frame">';
         echo '<img height="100%" src="data:image/jpeg;base64,' .
             base64_encode($reizen['foto']) .

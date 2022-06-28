@@ -25,6 +25,7 @@
           </div>
         </div>
         <div class="main-buttons">
+          <button id="home-btn"><a href="index.php">Home</a></button>
           <button><a href="overons.php">Over Ons</a></button>
           <button><a href="informatie.php">Informatie</a></button>
           <button><a href="contact.php">Contact</a></button>

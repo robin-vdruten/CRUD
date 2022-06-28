@@ -564,6 +564,11 @@ header input {
   .down-head video {
     display: none;
   }
+
+  .main-wrap-up {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .main-page {
@@ -585,15 +590,14 @@ header input {
 }
 
 .main-wrap-up-left {
-  width: 70%;
+  width: 800px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .main-wrap-up-right {
-  width: 30%;
+  width: 415px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -604,33 +608,43 @@ header input {
 }
 
 .main-wrap-image-flight {
-  width: 360px;
-  height: auto;
+  width: auto;
+  height: 250px;
   margin-bottom: 1em;
   margin-right: 1em;
   position: relative;
 }
 
-.test-13 {
+@media only screen and (max-width: 800px) {
+  .main-wrap-image-flight {
+    margin-right: 0em;
+  }
+}
+
+.hover-front-home {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   transition: 0.5s;
   background-color: #f0f8ff57;
-}
-
-.test-13:hover {
-  transition: 0.5s;
-  background-color: #70ccf44d;
   display: flex;
   justify-content: center;
   text-align: center;
+  align-items: center;
+  padding: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.hover-front-home:hover {
+  transition: 0.5s;
+  background-color: rgba(0, 128, 255, 0.466);
 }
 .main-wrap-upper,
 .main-wrap-downer {
   width: 100%;
-  height: 150px;
+  height: auto;
   padding-top: 25px;
   padding-bottom: 25px;
   display: flex;
@@ -640,7 +654,7 @@ header input {
 .main-alt-text {
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
   background-color: #eeeaea;
 }
 
@@ -651,7 +665,7 @@ header input {
 }
 
 .line-alt {
-  height: 100%;
+  height: auto;
   width: 2px;
   background-color: #092a5e;
 }
@@ -661,6 +675,10 @@ header input {
   width: 100%;
   height: 50px;
   margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .book-page {
@@ -752,9 +770,6 @@ header input {
   justify-content: center;
   text-align: center;
   align-items: center;
-}
-
-@media (max-width: 500px) {
 }
 
 .container-input h1 {
@@ -889,8 +904,12 @@ textarea {
 .input-form-info {
   width: 100%;
   height: auto;
-  background-color: rgb(235, 198, 198);
   margin-left: 1em;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .contact-wrap-up {
@@ -899,6 +918,22 @@ textarea {
   height: auto;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 1100px) {
+  .contact-wrap-up {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .container-input {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .item-wrap-page {
@@ -1032,6 +1067,270 @@ textarea {
 .right-item-book {
   display: flex;
 }
+.btn-show-book {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #092a5e;
+  border: none;
+  transition: 0.5s;
+}
+
+.btn-show-book:hover {
+  background-color: #70cdf4;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* infomatie pagina */
+
+.wrap-info-page {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.blok-info-center {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #eeeaea;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.info-page-blok {
+  width: 45%;
+  height: 400px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.info-blok-landen {
+  float: left;
+}
+
+.info-blok-subtext {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.inner-suntext-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+}
+
+.info-blok-dienst {
+  float: right;
+}
+
+.info-blok-vraag {
+  position: absolute;
+  bottom: 0px;
+}
+
+.inner-suntext-info a {
+  color: #092a5e;
+}
+.info-blok-vraag a {
+  color: #092a5e;
+}
+
+@media only screen and (max-width: 1100px) {
+  .info-page-blok {
+    width: 440px;
+  }
+
+  .blok-info-center {
+    justify-content: center;
+  }
+}
+
+/* bookingitem */
+
+@media only screen and (max-width: 1100px) {
+  .wrapper-all {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item-image-page {
+    width: auto;
+    height: 230px;
+  }
+  .item-info-page {
+    width: 100%;
+  }
+
+  .item-book-page {
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .left-item-book {
+    margin-bottom: 2em;
+  }
+
+  .left-review {
+    width: 50px;
+    margin-bottom: 1em;
+  }
+  .right-review {
+    width: 200px;
+  }
+
+  .review-content {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* navigator voor mobiel */
+
+@media only screen and (max-width: 1100px) {
+}
+
+.content-flex a {
+  text-decoration: none;
+  color: #1e1e23;
+  opacity: 1;
+  font-family: "work sans", sans serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: 200ms;
+}
+.content-flex a:hover {
+  opacity: 0.5;
+}
+.content-flex ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.content-flex {
+  border: 1px solid #36383f;
+  border-radius: 20px;
+  width: 94%;
+  height: 91%;
+  background-color: #f5f6fa;
+  overflow: hidden;
+}
+.content-flex nav {
+  background-color: #1e1e23;
+  height: 65px;
+}
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383f;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 180px;
+  height: 400px;
+  box-shadow: 0 0 10px #85888c;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #f5f6fa;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/* <div class="content-flex">
+          
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            <ul id="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Info</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+           </div>
+          </nav>
+        </div> */
 
 .edit {
   display: flex;
@@ -1084,3 +1383,4 @@ textarea {
 .closed {
   display: none;
 }
+
