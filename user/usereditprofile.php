@@ -150,9 +150,9 @@ if (isset($_GET['id'])) {
                             'userID'
                         ]; ?>" id="passwordreset" method="post">
                             <p>nieuw password</p>
-                            <input type="text" name="passreset" value=""/>
+                            <input type="password" name="passreset" value=""/>
                             <p>herhaal nieuw password</p>
-                            <input type="text" name="passtest" value=""/>
+                            <input type="password" name="passtest" value=""/>
                             <input type="submit" class="button" name="passwordreset" value="change">
                         </form>
                     </div>

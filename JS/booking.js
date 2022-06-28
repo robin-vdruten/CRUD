@@ -20,6 +20,25 @@ $(".annuleren").submit(function (e) {
   });
 });
 
+$(".book").submit(function (e) {
+  e.preventDefault();
+
+  var form = $(this);
+
+  console.log("test");
+  $.ajax({
+    type: "POST",
+    url: "PHP/booking.php",
+    data: form.serialize(),
+    success: function (data) {
+      $("#book").append(data);
+    },
+    fail: function (xhr, textStatus, errorThrown) {
+      alert("request failed");
+    },
+  });
+});
+
 window.onclick = (event) => {
   if (event.target === reizensec) {
     reizensec.style.display = "none";

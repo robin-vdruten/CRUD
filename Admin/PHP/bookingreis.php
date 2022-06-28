@@ -25,8 +25,15 @@ class booking
                 <div class="header"><h4>$<?php echo $value[
                     'prijs'
                 ]; ?></h4></div>
-                <div class="header"><h5><?php echo $value['land']; ?></h5></div>
-                <div class="bericht"><p><?php echo $value['hotel']; ?></p></div>
+                <div class="header"><h5>land: <?php echo $value[
+                    'land'
+                ]; ?></h5></div>
+                <div class="bericht"><p>hotel: <?php echo $value[
+                    'hotel'
+                ]; ?></p></div>
+                <div class="bericht"><p>begin reis: <?php echo $value[
+                    'startDatum'
+                ]; ?></p></div>
                 <div class="bericht"><?php echo '<img width="70" src="data:image/jpeg;base64,' .
                     base64_encode($value['foto']) .
                     '"/>'; ?></div>

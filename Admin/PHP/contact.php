@@ -23,8 +23,8 @@ class contact
         $stmt->execute();
         $contact = $stmt->fetch();
         ?>
-         <div class="containercon">
-            <div class="box">
+         <div class="containercon" style="width:100%; height:100%;grid-template-columns: repeat(1, minmax(0, auto));">
+            <div class="box" style="width:100%; height:100%; border:1px solid white;">
                 <div class="header"><h4><?php echo $contact[
                     'naam'
                 ]; ?></h4></div>

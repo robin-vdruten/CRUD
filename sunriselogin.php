@@ -36,7 +36,12 @@ session_start();
                   </div>
                   <div class="password">
                     <label>Wachtwoord</label>
-                    <input type="text" name="password" class="input" required />
+                    <input
+                      type="password"
+                      name="password"
+                      class="input"
+                      required
+                    />
                   </div>
                   <div class="button">
                     <input
@@ -78,7 +83,7 @@ session_start();
                   <div class="password">
                     <label>Wachtwoord</label>
                     <input
-                      type="text"
+                      type="password"
                       name="wachtwoord"
                       class="input"
                       required
