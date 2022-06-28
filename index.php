@@ -30,7 +30,7 @@ session_start(); ?>
                 src="../CRUD/images/pexels-photo-1320686.jpeg"
                 alt="#"
               />
-              <a href="booking.php">
+              <a href="booking.php?land=&hotel=&date=&personen=">
                 <div class="hover-front-home">
                   <div class="align">
                     <h4>Alle bestemmingen</h4>

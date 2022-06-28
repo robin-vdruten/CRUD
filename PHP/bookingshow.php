@@ -25,7 +25,7 @@ function search($search)
                 >';
 
         echo '<div class="image-frame">';
-        echo '<img height="100%" src="data:image/jpeg;base64,' .
+        echo '<img height="100%" width="100%" src="data:image/jpeg;base64,' .
             base64_encode($reizen['foto']) .
             '"/>';
         echo '<div class="image-static-info">';
@@ -46,7 +46,10 @@ function search($search)
         echo '<input type="hidden" value="' .
             $reizen['reisID'] .
             '" name="reis"/>';
-        echo '<button type="submit" >button</button>';
+        echo '<button class="btn-show-book" type="submit" >
+<i class="fa-solid fa-arrow-pointer"></i>
+
+</button>';
         echo '</form>';
         echo '<div class="book-description">';
         echo '<div class="book-in-des">';

@@ -133,7 +133,9 @@ if (isset($_GET['id'])) {
             </form>
             <form method="post" action="" id="resetpassword">
                 <input type="hidden" name="resetpass" value="true">
-                <input type="hidden" name="email" value="appelflapkipkerrie@outlook.com">
+                <input type="hidden" name="email" value="<?php echo $row[
+                    'email'
+                ]; ?>">
                 <input type="hidden" name="id" value="<?php echo $row[
                     'userID'
                 ]; ?>">
