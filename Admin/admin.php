@@ -21,7 +21,7 @@ $row = $stmt->fetch();
   <head>
     <?php
     include '../user/includes/head.php';
-    head('sunrise login en register', '');
+    head('admin', 'Artboard1.png');
     ?>
   </head>
   <body class="profile">

@@ -7,7 +7,7 @@ function head($title, $icon)
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php echo $title; ?></title>
-  <link rel="shortcut icon" href="<?php echo $icon; ?>" />
+  <link rel="shortcut icon" href="../Images/<?php echo $icon; ?>" />
   <link
       href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
       rel="stylesheet"

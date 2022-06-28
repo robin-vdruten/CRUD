@@ -3,8 +3,9 @@
   <head>
     <title>Over Ons | Sunrise</title>
     <?php
+    session_start();
     include 'includes/head.php';
-    head('Over Ons | Sunrise', '');
+    head('Over Ons | Sunrise', 'Artboard1.png');
     ?>
   </head>
   <body>

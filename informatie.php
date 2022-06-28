@@ -5,7 +5,7 @@
     <?php
     session_start();
     include 'includes/head.php';
-    head('Informatie | Sunrise', '');
+    head('Informatie | Sunrise', 'Artboard1.png');
     ?>
   </head>
   <body>

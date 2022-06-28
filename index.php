@@ -5,7 +5,7 @@ session_start(); ?>
   <head>
     <?php
     include 'includes/head.php';
-    head('Home | Sunrise', '');
+    head('Home | Sunrise', 'Artboard1.png');
     ?>
   </head>
   <body>
