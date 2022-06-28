@@ -9,11 +9,11 @@ include 'PHP/bookingreis.php';
 
 global $conn;
 
-$naam = $_SESSION['naam'];
+$email = $_SESSION['email'];
 
-$qeury = 'SELECT * FROM users WHERE voornaam = :voornaam';
+$qeury = 'SELECT * FROM users WHERE email = :email';
 $stmt = $conn->prepare($qeury);
-$stmt->bindParam(':voornaam', $naam);
+$stmt->bindParam(':email', $email);
 $stmt->execute();
 $row = $stmt->fetch();
 ?>
