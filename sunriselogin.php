@@ -99,7 +99,9 @@ session_start();
                   </div>
                 </div>
               </div>
-              <a href="https://privacypolicyvoorbeeld.nl/">Privacy Policy</a>
+              <a href="https://www.klm.nl/information/legal/privacy-policy"
+                >Privacy Policy</a
+              >
             </form>
           </div>
           <div class="right">

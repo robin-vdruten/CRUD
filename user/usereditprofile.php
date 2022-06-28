@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="../CSS/styles.css" />
     <?php
     include 'includes/head.php';
-    head('sunrise login en register', '');
+    head('sunrise login en register', 'Artboard1.png');
     ?>
   </head>
   <body class="profile">

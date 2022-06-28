@@ -3,8 +3,9 @@
   <head>
     <title>Contact | Sunrise</title>
     <?php
+    session_start();
     include 'includes/head.php';
-    head('Contact | Sunrise', '');
+    head('Contact | Sunrise', 'Artboard1.png');
     ?>
   </head>
   <body>
