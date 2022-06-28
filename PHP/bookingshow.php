@@ -32,7 +32,7 @@ foreach ($result as $reizen) {
                 echo '</div>';
              echo '</div>';
              echo '<input type="hidden" value="' . $reizen['reisID'] . '" name="reis"/>';
-             echo '<button type="submit" >button</button>';
+             echo '<button class="btn-show-book" type="submit" ><i class="fa-solid fa-arrow-pointer"></i></button>';
             echo '</form>';
             echo '<div class="book-description">';
               echo '<div class="book-in-des">';

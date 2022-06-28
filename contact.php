@@ -18,7 +18,9 @@
                 <h1>contact</h1>
               </div>
               <div class="row">
-                <h4 style="text-align: center">Sunrise | We reageren zo snel mogelijk</h4>
+                <h4 style="text-align: center">
+                  Sunrise | We reageren zo snel mogelijk
+                </h4>
               </div>
               <div class="row input-container">
                 <div class="col-xs-12">
@@ -46,12 +48,24 @@
                   </div>
                 </div>
                 <div class="col-xs-12">
-                  <button class="btn-lrg submit-btn" name="stuur2">Verstuur Bericht</button>
+                  <button class="btn-lrg submit-btn" name="stuur2">
+                    Verstuur Bericht
+                  </button>
                 </div>
               </div>
             </form>
           </div>
-          <div class="input-form-info">//</div>
+          <div class="input-form-info">
+            <div class="info-text-box">
+              <h4>Meer hulp nodig?</h4>
+              <p>Social media</p>
+              <p>
+                Stel je vraag aan ons social care team via Facebook of Twitter.
+                Wij staan 7 dagen per week voor je klaar.
+              </p>
+              <p>Ma t/m za 08:00 - 20:00 Zondag 09:00 - 20:00</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
