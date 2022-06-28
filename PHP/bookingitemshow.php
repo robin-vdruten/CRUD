@@ -11,7 +11,7 @@ if (isset($_GET['reis'])) {
         echo '<div class="item-wrap-page">';
         echo '<div class="wrapper-all">';
         echo '<div class="item-image-page">';
-        echo '<img height="100%" src="data:image/jpeg;base64,' .
+        echo '<img src="data:image/jpeg;base64,' .
             base64_encode($reizen['foto']) .
             '"/>';
         echo '</div>';

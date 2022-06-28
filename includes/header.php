@@ -40,22 +40,61 @@
           } ?>
         </div>
       </nav>
-      <div class="align-search2">
-        <form
-          action="PHP/bookshowsearch.php"
-          method="get"
-          class="form-search"
-        >
-          <input
-            class="search-nav"
-            type="text"
-            placeholder=" Zoeken.."
-            name="search"
-          />
-          <button type="submit" class="button-search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
+      <div class="in-book2">
+        <div class="wrapper-book2">
+          <form class="nav-form" action="PHP/searchreis.php" method="POST">
+            <div class="option-book2 vakantietype">
+              <label for=""
+                ><i class="fa-solid fa-location-dot"></i
+                >&nbsp;Land</label
+              >
+              <input
+                type="text"
+                class="collapsible"
+                placeholder="Geen voorkeur"
+                name="land"
+                id="insert-type"
+              />
+            </div>
+            <div class="option-book2 Bestemming">
+              <label for=""
+                ><i class="fa-solid fa-hotel"></i>&nbsp;Hotel</label
+              >
+              <input
+                type="text"
+                class="collapsible"
+                placeholder="Geen voorkeur"
+                name="hotel"
+                id="insert-bestemming"
+              />
+            </div>
+            <div class="option-book2 Wanneer">
+              <label for=""
+                ><i class="fa-solid fa-calendar-day"></i>&nbsp;Wanneer</label
+              >
+              <input
+                type="datetime-local"
+                id="date"
+                name="date"
+                value=""
+              />
+            </div>
+            <div class="option-book2 wie">
+              <label for=""
+                ><i class="fa-solid fa-user-group"></i>&nbsp;personen</label
+              >
+              <input
+                type="number"
+                class="collapsible"
+                placeholder="Geen voorkeur"
+                name="personen"
+              />
+            </div>
+            <div class="book">
+              <button class="button-zoek" name="stuur">Zoeken</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
