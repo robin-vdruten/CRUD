@@ -3,6 +3,7 @@
   <head>
     <title>Booking | Sunrise</title>
     <?php
+    session_start();
     include 'includes/head.php';
     head('Booking | Sunrise', '');
     ?>
@@ -13,8 +14,14 @@
       <div class="main-wrap-page">
         <div class="book-page">
           <?php
-            include 'PHP/bookingshow.php';
-            
+          include 'PHP/bookingshow.php';
+          $items = [
+              $_GET['hotel'],
+              $_GET['land'],
+              $_GET['date'],
+              $_GET['personen'],
+          ];
+          search($items);
           ?>
         </div>
       </div>

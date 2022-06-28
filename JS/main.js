@@ -15,14 +15,12 @@ for (i = 0; i < coll.length; i++) {
 
 $(document).click((event) => {
   if (!$(event.target).closest("#insert-type").length) {
-    console.log("worst");
     $(".dropping").css({ display: "none" });
   }
 });
 
 $(document).click((event) => {
   if (!$(event.target).closest("#insert-bestemming").length) {
-    console.log("brood");
     $(".dropping2").css({ display: "none" });
   }
 });

@@ -121,7 +121,7 @@ class reizen
           name="file_up"
         />';
         echo '</div>';
-        echo '<button class="create" id="create" type="submit" name="create">create</button>';
+        echo '<button class="create button" id="create" type="submit" name="create">create</button>';
         echo '</form>';
     }
 
@@ -144,8 +144,10 @@ class reizen
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $reizen = $stmt->fetch();
-
-        echo '<form method="post" class="updatereis" id="updatereiz" name="update" action="#">';
+        echo '<form method="post" class="updatereis" id="updatereiz" name="update" style="
+    display: flex;
+" action="#">';
+        echo '<div>';
         echo '<input type="hidden" name="id" value="' . $id . '">';
         echo '<input type="hidden" name="update" value="update">';
         echo '<div>';
@@ -185,8 +187,11 @@ class reizen
           type="file"
           name="file_up"
         />';
+        echo '<button class="updatereis button" id="updatereis" type="submit" name="update">update</button>';
         echo '</div>';
-        echo '<button class="updatereis" id="updatereis" type="submit" name="update">update</button>';
+        echo '<img width="150" height="150" src="data:image/jpeg;base64,' .
+            base64_encode($reizen['foto']) .
+            '"/>';
         echo '</form>';
 
         return;
@@ -245,9 +250,6 @@ class reizen
         $reizen = $stmt->fetchAll();
 
         foreach ($reizen as $key => $value) { ?>
-                <p><?php echo '<img width="60" src="data:image/jpeg;base64,' .
-                    base64_encode($value['foto']) .
-                    '"/>'; ?></p>
                     <div class="reizen-form formfixreis">
                         <form class="reizen-form fixformreis" action="PHP/reizen.php" name="delete"  method="POST">
                 <div class="reizen">
@@ -286,7 +288,7 @@ class reizen
                   ]; ?>" name="seats" />
                   <hr>
                 </div>
-                <div class="delete">
+                <div>
                   <button class="delete" type="submit" name="delete">
                     <p>Wissen</p>
                   </button>
